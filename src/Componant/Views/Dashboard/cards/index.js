@@ -5,7 +5,7 @@ function Cards({ title, description, images, price }) {
     return (
         
         <div style={{  display:"inline-flex", }}>
-        <div  style={{borderRadius: 10,height:380, border: '1px solid rgb(191, 189, 189)', margin:10}}>
+        <div  style={{borderRadius: 10,height:380, border: '1px solid rgb(191, 189, 189)', margin:10, cursor:'pointer'}}>
             <img style={{width: 300, height: 200, borderRadius:10, borderBottom: '1px solid rgb(191, 189, 189)'}} src={images[0]} className="card-img-top" alt="alt"/>
                 <div style={{width:300, textAlign:"left", marginTop:-10 }}>
                     {/* <div style={{display:'flex', }}> */}

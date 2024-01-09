@@ -1,5 +1,11 @@
 import { useEffect, useState } from "react";
 import Cards from "./cards";
+import olx from '../../../olx.svg'
+import olxtop from '../../../olx top.svg'
+import car from "../../../car-front.svg";
+import building from "../../../building.svg";
+import search from "../../../search.svg";
+
 
 
 function Dashboard() {
@@ -25,12 +31,19 @@ function Dashboard() {
             <nav style={{backgroundColor: "rgb(241, 239, 239)", position: "fixed", top: 0, width: "100%"}}>
                 <div style={{display:"flex"}}>
                     
+                <img style={{width:40,marginLeft:40,}} src={olxtop} ></img>
+
+                <img style={{marginLeft:'2rem'}} src={car} ></img>
                     <p> MOTORS </p>
-                    <p> PROPERTY </p>
+                    <img style={{marginLeft:'2rem'}} src={building} ></img>
+                    <p > PROPERTY </p>
                 </div>
-                <div style={{display:"flex", paddingLeft:'8.5rem', paddingBottom:10}}>
-                    <input style={{width:'16rem', height:'2.5rem'}}  placeholder="search" ></input>
-                    <input style={{width:'40rem', height:'2.5rem', marginLeft:18 }}placeholder="Find Cars, Mobile Phones and more..." ></input>
+                <div style={{display:"flex", paddingLeft:'2rem', paddingBottom:10}}>
+                    <img style={{width:60,}} src={olx} ></img>
+                    <input   style={{width:'16rem', height:'2.3rem',marginLeft:20, marginTop:6, border: '2px solid black', borderRadius:5}}  placeholder =  "Pakistan" ></input>
+                    
+                    <input style={{width:'40rem', height:'2.3rem', marginLeft:18, marginTop:6, border: '2px solid black', borderRadius:5,}}placeholder="Find Cars, Mobile Phones and more..." ></input>
+                    <img  style={{background:'black', width:50, height:45, marginTop:5, borderRadius:5 }} src={search} ></img>
                 </div>
                 
                     
@@ -44,6 +57,8 @@ function Dashboard() {
                 <p style={{ margin: "0 8px" }}>Video-Audios</p>
                 <p style={{ margin: "0 8px" }}>Tablets</p>
                 <p style={{ margin: "0 8px" }}>Land&Plots</p>
+                
+                
 
             </div>
             <br/>
