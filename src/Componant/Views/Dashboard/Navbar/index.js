@@ -50,6 +50,11 @@ function Navbar() {
 
 
             </div>
+            <div style={{borderTop:'1px solid #e1dcdceb', marginBottom:20}} >
+
+            </div>
+            <img style={{width:'95%'}} src="https://images.olx.com.pk/thumbnails/295176473-800x600.webp" ></img>
+
 
 
 

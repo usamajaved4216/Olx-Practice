@@ -34,6 +34,14 @@ function Footer() {
                 <p style={{ margin: '0 0 5px 0' }}>Mobile Phones</p>
                 <p style={{ margin: '0 0 5px 0' }}>Terms of use</p>
             </div>
+            <div style={{marginTop:60}}>
+               <img style={{width:100}} src="https://www.olx.com.pk/assets/iconAppStoreEN_noinline.a731d99c8218d6faa0e83a6d038d08e8.svg" ></img>
+            <img   style={{width:100}} src="https://www.olx.com.pk/assets/iconGooglePlayEN_noinline.9892833785b26dd5896b7c70b089f684.svg" ></img>
+            <img  style={{width:100}} src="https://www.olx.com.pk/assets/iconAppGallery_noinline.6092a9d739c77147c884f1f7ab3f1771.svg" ></img>
+            
+            </div>
+           
+
         </div>
         </footer>
         <div style={{width:'100%', height:'50px', background:'#002f34', paddingTop:6}}>

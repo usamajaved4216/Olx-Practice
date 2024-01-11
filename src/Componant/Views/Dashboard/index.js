@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import Cards from "./cards";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import Category from "./Category";
+import ScrollToTopButton from "../../../Componant/Topbtn"
 
 
 function Dashboard() {
@@ -25,11 +27,14 @@ function Dashboard() {
         <div>
              
             <Navbar/>
+            <Category/>
             
             {products.map(item => {
                 const { title, description, images, price, id } = item
                 return <Cards price={price} title={title} description={description} images={images} id={id} />
             })}
+            <br></br><br></br>
+            <ScrollToTopButton/><br></br>
             <Footer/>
         </div>
     )

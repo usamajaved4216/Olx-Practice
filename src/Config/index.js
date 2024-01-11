@@ -8,7 +8,7 @@ export default function Router() {
       <Routes>
         <Route>
           <Route path="/"  element={<Dashboard />} />
-          <Route path="DetailScreen/:adId" element={<DetailScreen />} />
+          <Route path="/DetailScreen/:adId" element={<DetailScreen />} />
     
         </Route>
       </Routes>
