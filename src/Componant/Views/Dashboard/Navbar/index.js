@@ -5,9 +5,10 @@ import car from "../../../../car-front.svg";
 import building from "../../../../building.svg";
 import search from "../../../../search.svg";
 import sellicon from '../../../../sellicon.svg'
-
+import { useNavigate } from 'react-router-dom';
 
 function Navbar() {
+    const navigate = useNavigate();
     return (
         <div>
             <div style={{ height: '7rem', }}></div>
@@ -28,8 +29,7 @@ function Navbar() {
 
                     <input style={{ width: '40rem', height: '2.3rem', marginLeft: 18, marginTop: 6, border: '2px solid black', borderTopLeftRadius: 5, borderBottomLeftRadius:5 }} placeholder="Find Cars, Mobile Phones and more..." ></input>
                     <img style={{ background: 'black', width: 50, height: 42.8, marginTop:5.8, borderTopRightRadius: 5 , borderBottomRightRadius:5 }} src={search} ></img>
-                    <h3 style={{marginLeft:'2rem'}} ><u>Login</u></h3>
-                    
+                    <button  onClick={()=>navigate('/Login')}  style={{marginLeft:'1rem', marginRight:'1rem', border:'none', fontWeight:'bold', fontSize:20}} ><u>Login</u></button>
                     <img style={{marginLeft:'1rem'}} src={sellicon } ></img>
 
                 </div>
