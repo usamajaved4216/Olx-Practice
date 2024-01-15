@@ -1,5 +1,8 @@
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword  } from "firebase/auth";
 import { initializeApp } from "firebase/app";
+
+
+
 const firebaseConfig = {
     apiKey: "AIzaSyDNm1iXlzJezANtXytGRwes4yGxP2h9ztg",
     authDomain: "olx-app-13128.firebaseapp.com",
@@ -12,22 +15,47 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth();
+const SignUp =(userInfo)=>{
+  const {email, password}=userInfo 
 
-function login(userInfo) {
-const {email, password}= userInfo
-    signInWithEmailAndPassword(auth, email, password)
+  createUserWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      // Signed up 
+      const user = userCredential.user;
+      // ...
+      alert('successfully')
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      // ..
+      alert(errorMessage)
+    });
+
+}  
+
+const login = (userInfo)=>{
+  const {email, password}=userInfo 
+  
+signInWithEmailAndPassword(auth, email, password)
   .then((userCredential) => {
+    // Signed in 
     const user = userCredential.user;
-    alert ('Login successfully')
+    // ...
+    alert('Login SuccessFully')
   })
   .catch((error) => {
     const errorCode = error.code;
     const errorMessage = error.message;
-    alert (errorMessage)
-
+    alert(errorMessage)
   });
+
 }
-    
 
-export default login;
 
+
+
+export {
+  SignUp,
+  login
+}
