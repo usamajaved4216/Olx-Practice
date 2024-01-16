@@ -22,7 +22,7 @@ function Signup() {
             <input placeholder="Fullname" onChange={(e) => setFullName(e.target.value)}  />
             <input placeholder="Age" onChange={(e) => setAge(e.target.value)} />
             <input placeholder="Enter Email" onChange={(e) => setEmail(e.target.value)} />
-            <input placeholder="Enter PAssword"  onChange={(e) => setPassword(e.target.value)} />
+            <input type="password" placeholder="Enter PAssword"  onChange={(e) => setPassword(e.target.value)} />
             <br />
             <button onClick={register}  >Signup</button>
          
