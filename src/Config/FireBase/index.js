@@ -18,10 +18,10 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth();
 const db = getFirestore(app);
 
-const SignUp = (userInfo) => {
+const SignUp = async (userInfo) => {
   const { email, password } = userInfo
 
-  createUserWithEmailAndPassword(auth, email, password)
+  await createUserWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
       // Signed up 
       const user = userCredential.user;
@@ -51,7 +51,7 @@ const login = async (userInfo) => {
   } catch (e) {
     alert(e.message)
     return e
-
+ 
   }
 }
 

@@ -11,9 +11,26 @@ function Signup() {
     const [email, setEmail] = useState()
     const [password, setPassword] = useState()
 
-    const register = ()=>{
-        SignUp({email , password , age , fullname})
-    } 
+    // const register = async ()=>{
+    //    await SignUp({email , password , age , fullname})
+    //    await navigate('/Login')
+    // } 
+
+    const register = async () =>{
+        await SignUp({email, password}).then((res) => {
+            console.log("🚀 ~ awaitSignUp ~ res:", res)
+            
+            if(res.user){
+                navigate('/Login')
+            }
+            
+        }).catch(err => {
+            console.log("🚀 ~ awaitSignUp ~ err:", err)
+            
+         
+            
+        })
+    }
 
     return (
         <div>

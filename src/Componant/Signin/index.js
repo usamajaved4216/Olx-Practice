@@ -14,12 +14,12 @@ const Login = async () =>{
     await login({email, password}).then((res) => {
         console.log("🚀 ~ awaitlogin ~ res:", res)
         if(res && res.user){
-navigate('/')
+            navigate('/')
         }
     	
     }).catch(err => {
         console.log("🚀 ~ awaitlogin ~ err:", err)
-    
+     
         
     })
 }
